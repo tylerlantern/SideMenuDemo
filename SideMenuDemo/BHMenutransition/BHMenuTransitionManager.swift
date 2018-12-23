@@ -29,18 +29,11 @@ extension BHMenuTransitionManager : UIViewControllerTransitioningDelegate {
     }
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return interactionTransition.transitionInProgress ? interactionTransition : nil
+        return nil
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        presentationAnimator = BHMenuPresentation(presentedViewController: presented, presenting: presenting)
-        presentationAnimator?.bhDelegate = self
-        
-        interactionTransition.attachViewController(presented)
-        interactionTransition.setUpGestureOnView(view: presentationAnimator?.dimmingView)
-        interactionTransition.setUpGestureOnView(view: presented.view)
-        
-        return presentationAnimator
+        return nil
     }
 }
 extension BHMenuTransitionManager : BHMenuPresentationDelegate {

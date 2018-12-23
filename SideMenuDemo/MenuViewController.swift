@@ -10,6 +10,10 @@ import UIKit
 
 class MenuViewController : UIViewController {
 
+    @IBAction func action_dismiss(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

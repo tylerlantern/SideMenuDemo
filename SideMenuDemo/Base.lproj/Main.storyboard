@@ -38,7 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1415" y="-76"/>
+            <point key="canvasLocation" x="820" y="21"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="V0M-Gp-Nla">
@@ -50,14 +50,22 @@
                         <color key="backgroundColor" red="0.43137254899999999" green="0.6588235294" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Wfk-rs-kAx"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6eg-ad-ZVH"/>
-                    <connections>
-                        <segue destination="x9b-fi-2Ww" kind="show" id="QG3-dg-nuE"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="6eg-ad-ZVH">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="d9M-v0-UGU">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ExG-uW-Wrq">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dismiss"/>
+                                <connections>
+                                    <action selector="action_dismiss:" destination="72v-xQ-qJt" eventType="touchUpInside" id="xED-PU-Gjc"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AiR-kv-d7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1556" y="690.40479760119945"/>
+            <point key="canvasLocation" x="820" y="780"/>
         </scene>
         <!--Sub Menu View Controller-->
         <scene sceneID="7bO-fs-eb5">
@@ -72,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRX-N3-eXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2370" y="690"/>
+            <point key="canvasLocation" x="2854" y="663"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NKc-SD-3ED">
@@ -108,7 +116,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0br-rz-PKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="616.79999999999995" y="690.40479760119945"/>
+            <point key="canvasLocation" x="-79" y="781"/>
         </scene>
     </scenes>
 </document>

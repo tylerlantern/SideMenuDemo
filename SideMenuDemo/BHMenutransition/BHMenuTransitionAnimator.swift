@@ -23,6 +23,7 @@ class BHMenuTransitionAnimator: NSObject , UIViewControllerAnimatedTransitioning
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
+        containerView.backgroundColor = UIColor.brown
         transitionContext.viewController(forKey: .from)
         let fromVc = transitionContext.viewController(forKey: .from)!
         let toVc = transitionContext.viewController(forKey: .to)!
