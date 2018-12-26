@@ -112,11 +112,11 @@
 				BEA98F2421CE91400010B552 /* BHMenutransition */,
 				BEA98EF621CE8E800010B552 /* AppDelegate.swift */,
 				BEA98EF821CE8E800010B552 /* FirstViewController.swift */,
+				BEA98F2D21CE92990010B552 /* MenuViewController.swift */,
 				BEA98EFA21CE8E800010B552 /* Main.storyboard */,
 				BEA98EFD21CE8E810010B552 /* Assets.xcassets */,
 				BEA98EFF21CE8E810010B552 /* LaunchScreen.storyboard */,
 				BEA98F0221CE8E810010B552 /* Info.plist */,
-				BEA98F2D21CE92990010B552 /* MenuViewController.swift */,
 				BEA98F2F21CE9E0A0010B552 /* SubMenuViewController.swift */,
 			);
 			path = SideMenuDemo;

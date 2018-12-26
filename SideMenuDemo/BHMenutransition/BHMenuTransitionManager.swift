@@ -10,13 +10,13 @@ class BHMenuTransitionManager: NSObject {
     var transitionAnimator : BHMenuTransitionAnimator!
     var presentationAnimator : BHMenuPresentation?
     lazy var interactionTransition = BHMenuInteraction()
-    init(instance :  BHMenuTransitionManagerDelegate
-        ,fromViewController vc: UIViewController ) {
+    
+    init(instance : BHMenuTransitionManagerDelegate, fromViewController vc: UIViewController ) {
         super.init()
-
         transitionAnimator =  BHMenuTransitionAnimator(fromViewController: vc)
         self.delegate = instance
     }
+    
 }
 
 extension BHMenuTransitionManager : UIViewControllerTransitioningDelegate {
