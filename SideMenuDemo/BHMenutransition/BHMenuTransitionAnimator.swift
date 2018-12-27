@@ -27,7 +27,6 @@ class BHMenuTransitionAnimator: NSObject , UIViewControllerAnimatedTransitioning
         let fromVc = transitionContext.viewController(forKey: .from)!
         let toVc = transitionContext.viewController(forKey: .to)!
         let isPresenting = self.fromViewController == fromVc ? true : false
-
         if  isPresenting{
             let targetWidth = fromVc.view.frame.width * 0.85
             toVc.view.frame = CGRect(x: targetWidth * -1, y: 0, width: targetWidth, height: fromVc.view.frame.height)
