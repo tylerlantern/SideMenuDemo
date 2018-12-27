@@ -7,9 +7,7 @@
 //
 
 import UIKit
-protocol dd {
-    
-}
+
 class FirstViewController: UIViewController {
     lazy var transitionManager = BHMenuTransitionManager(instance: self
         , fromViewController: self.navigationController!)
@@ -19,7 +17,6 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

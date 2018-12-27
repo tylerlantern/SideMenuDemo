@@ -10,13 +10,13 @@ class BHMenuTransitionManager: NSObject {
     var transitionAnimator : BHMenuTransitionAnimator!
     var presentationAnimator : BHMenuPresentation?
     lazy var interactionTransition = BHMenuInteraction()
-    init(instance :  BHMenuTransitionManagerDelegate
-        ,fromViewController vc: UIViewController ) {
+    
+    init(instance : BHMenuTransitionManagerDelegate, fromViewController vc: UIViewController ) {
         super.init()
-
         transitionAnimator =  BHMenuTransitionAnimator(fromViewController: vc)
         self.delegate = instance
     }
+    
 }
 
 extension BHMenuTransitionManager : UIViewControllerTransitioningDelegate {
@@ -29,7 +29,7 @@ extension BHMenuTransitionManager : UIViewControllerTransitioningDelegate {
     }
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return interactionTransition.transitionInProgress ? interactionTransition : nil
+        return nil
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
@@ -41,6 +41,7 @@ extension BHMenuTransitionManager : UIViewControllerTransitioningDelegate {
         interactionTransition.setUpGestureOnView(view: presented.view)
         
         return presentationAnimator
+
     }
 }
 extension BHMenuTransitionManager : BHMenuPresentationDelegate {
