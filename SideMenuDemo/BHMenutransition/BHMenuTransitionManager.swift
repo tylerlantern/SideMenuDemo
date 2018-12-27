@@ -9,7 +9,6 @@ class BHMenuTransitionManager: NSObject {
     var delegate : BHMenuTransitionManagerDelegate?
     var transitionAnimator : BHMenuTransitionAnimator!
     var presentationAnimator : BHMenuPresentation?
-    lazy var interactionTransition = BHMenuInteraction()
     init(instance :  BHMenuTransitionManagerDelegate
         ,fromViewController vc: UIViewController ) {
         super.init()
@@ -29,22 +28,13 @@ extension BHMenuTransitionManager : UIViewControllerTransitioningDelegate {
     }
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return interactionTransition.transitionInProgress ? interactionTransition : nil
+        return nil
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         presentationAnimator = BHMenuPresentation(presentedViewController: presented, presenting: presenting)
-        presentationAnimator?.bhDelegate = self
-        
-        interactionTransition.attachViewController(presented)
-        interactionTransition.setUpGestureOnView(view: presentationAnimator?.dimmingView)
-        interactionTransition.setUpGestureOnView(view: presented.view)
-        
         return presentationAnimator
     }
+    
 }
-extension BHMenuTransitionManager : BHMenuPresentationDelegate {
-    func requestDismiss() {
-        delegate?.requestDismiss?()
-    }
-}
+
