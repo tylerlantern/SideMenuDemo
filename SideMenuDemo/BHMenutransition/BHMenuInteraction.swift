@@ -6,9 +6,9 @@ class BHMenuInteraction: UIPercentDrivenInteractiveTransition {
     var transitionInProgress = false
     var shouldCompleteTransition = false
     var const :  CGFloat = 0
-    var viewController : UIViewController!
-    func attachViewController(_ vc : UIViewController)  {
-        viewController = vc
+    var presentedViewController : UIViewController!
+    func attachViewController(presentedViewController vc : UIViewController)  {
+        presentedViewController = vc
     }
     func setUpGestureOnView(view : UIView?){
         guard let view = view else {return}
@@ -22,7 +22,7 @@ class BHMenuInteraction: UIPercentDrivenInteractiveTransition {
         switch sender.state {
         case .began:
             transitionInProgress = true
-            viewController.dismiss(animated: true, completion: nil)
+            presentedViewController.dismiss(animated: true, completion: nil)
             break
         case .changed:
             guard viewTranslation.x < 0 else {

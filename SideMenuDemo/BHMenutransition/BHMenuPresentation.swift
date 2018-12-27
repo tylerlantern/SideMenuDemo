@@ -40,6 +40,7 @@ public class BHMenuPresentation: UIPresentationController {
             self.dimmingView.alpha = 0.5
         }, completion: nil)
     }
+    
     override public func dismissalTransitionWillBegin() {
         super.dismissalTransitionWillBegin()
         guard let coordinator = presentedViewController.transitionCoordinator else {
@@ -49,4 +50,5 @@ public class BHMenuPresentation: UIPresentationController {
             self.dimmingView.alpha = 0.0
         }, completion: nil)
     }
+    
 }

@@ -36,7 +36,7 @@ extension BHMenuTransitionManager : UIViewControllerTransitioningDelegate {
         presentationAnimator = BHMenuPresentation(presentedViewController: presented, presenting: presenting)
         presentationAnimator?.bhDelegate = self
         
-        interactionTransition.attachViewController(presented)
+        interactionTransition.attachViewController(presentedViewController : presented)
         interactionTransition.setUpGestureOnView(view: presentationAnimator?.dimmingView)
         interactionTransition.setUpGestureOnView(view: presented.view)
         
